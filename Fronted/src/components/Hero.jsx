@@ -1,5 +1,4 @@
 import React from 'react';
-import card4 from "../assets/card4.jpg";
 
 const Hero = () => {
   return (
@@ -38,7 +37,7 @@ const Hero = () => {
       <div className="w-full md:w-1/2 flex justify-center mt-10">
         <img 
           className="w-full max-w-[300px] md:max-w-[500px] h-auto object-cover rounded-lg shadow-lg" 
-          src={card4} 
+         src="/card4.jpg"
           alt="hero img"
         />
       </div>
