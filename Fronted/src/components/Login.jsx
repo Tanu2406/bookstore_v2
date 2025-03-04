@@ -74,7 +74,7 @@ const Login = ( {visible,onClose}) => {
 
       {/* Email Field */}
       <div className="mb-4 flex flex-col">
-        <p className="mb-2">Email</p>
+        <p className="mb-2 text-left w-full">Email</p>
         <input
           id="email"
           type="email"
@@ -87,7 +87,7 @@ const Login = ( {visible,onClose}) => {
 
       {/* Password Field */}
       <div className="mb-4 flex flex-col">
-        <p className="mb-2">Password</p>
+        <p className="mb-2 text-left w-full">Password</p>
         <input
           id="password"
           type="password"

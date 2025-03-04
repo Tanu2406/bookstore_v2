@@ -57,7 +57,7 @@ const SignUp = () => {
 
       {/* Name Field */}
       <div className="mb-4 flex flex-col">
-        <p className="mb-2">Name</p>
+        <p className="mb-2 text-left w-full">Name</p>
         <input
           id="name"
           type="text"
@@ -70,7 +70,7 @@ const SignUp = () => {
 
       {/* Email Field */}
       <div className="mb-4 flex flex-col">
-        <p className="mb-2">Email</p>
+        <p className="mb-2 text-left w-full">Email</p>
         <input
           id="email"
           type="email"
@@ -83,7 +83,7 @@ const SignUp = () => {
 
       {/* Password Field */}
       <div className="mb-4 flex flex-col">
-        <p className="mb-2">Password</p>
+        <p className="mb-2 text-left w-full">Password</p>
         <input
           id="password"
           type="password"
