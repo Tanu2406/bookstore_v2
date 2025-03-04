@@ -46,7 +46,7 @@ const SignUp = () => {
             
   return (
     <>
-   <div className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center z-50">
+   <div className="fixed inset-0  bg-opacity-1 backdrop-blur-sm flex justify-center items-center z-50">
   <div className="m-4 w-[400px] bg-white p-6 border-2 border-pink-400 rounded-2xl shadow-lg">
     <form onSubmit={handleSubmit(onSubmit)}>
       {/* Title & Close Button */}
@@ -96,7 +96,7 @@ const SignUp = () => {
 
       {/* Buttons & Login Redirect */}
       <div className="flex justify-between items-center">
-        <button className="bg-pink-400 text-white px-6 py-2 rounded-lg hover:bg-pink-300">SignUp</button>
+        <button className="!bg-pink-400 text-white px-6 py-2 rounded-lg hover:bg-pink-300">SignUp</button>
         <p>
           Have an account?  
           <button onClick={() => setShowMyModal(true)}>

@@ -63,7 +63,7 @@ const Login = ( {visible,onClose}) => {
       }
   return (
     <>
-   <div className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center z-50">
+   <div className="fixed inset-0  bg-opacity-1 backdrop-blur-sm flex justify-center items-center z-50">
   <div className="m-4 w-[400px] bg-white p-6 border-2 border-pink-400 rounded-2xl shadow-lg">
     <form onSubmit={handleSubmit(onSubmit)}>
       {/* Title & Close Button */}
@@ -100,7 +100,7 @@ const Login = ( {visible,onClose}) => {
 
       {/* Buttons & Signup Redirect */}
       <div className="flex justify-between items-center">
-        <button className="bg-pink-400 text-white px-6 py-2 rounded-lg hover:bg-pink-300">Login</button>
+        <button className="!bg-pink-400 text-white px-6 py-2 rounded-lg hover:bg-pink-300">Login</button>
         <p className="mt-4">
           Not registered?  
           <Link to="/signup">

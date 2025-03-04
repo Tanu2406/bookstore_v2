@@ -5,7 +5,7 @@ const Card = ({item}) => {
   return (
  <>
     <div>
-    <div className="w-full px-4 md:px-6 lg:px-8 max-w-[95vw] mb-8 hover:scale-105 duration-200">
+    <div className="w-full px-4 md:px-6 lg:px-8 max-w-[95vw] mb-8 hover:scale-105 duration-200 z-40">
           
             <div key={item.id} className="flex justify-center">
               <div className="bg-white w-full max-w-[280px] h-[400px] mx-auto border rounded-2xl border-pink-200 shadow-lg p-4">
