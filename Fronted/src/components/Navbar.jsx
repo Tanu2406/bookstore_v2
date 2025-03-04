@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass, faMoon, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass,  faBars } from "@fortawesome/free-solid-svg-icons";
 import Login from "./Login";
 import Logout from "./Logout";
 import { useAuth } from "../context/AuthProvider";
@@ -62,8 +62,7 @@ const Navbar = () => {
          {/* Search Icon (For Small Screens) */}  <div className="lg:hidden text-xl">   
             <FontAwesomeIcon icon={faMagnifyingGlass} />
             </div> 
-            {/* Moon Icon */}
-            <FontAwesomeIcon className="text-xl" icon={faMoon} onClick={()=>setTheme(theme==="light"?"dark":"light")} />
+           
 
             {authUser ? (
                     <Logout />
