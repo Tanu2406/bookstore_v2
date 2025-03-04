@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import book from "../assets/book.avif";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faMoon, faBars } from "@fortawesome/free-solid-svg-icons";
 import Login from "./Login";
@@ -43,7 +42,7 @@ const Navbar = () => {
             </div>
 
             {/* Logo */}
-            <img src={book} className="md:w-[4rem] md:h-[4rem] w-8 h-8 ml-2" alt="Book Logo" />
+            <img src="/book.avif" alt="Book"  className="md:w-[4rem] md:h-[4rem] w-8 h-8 ml-2" />
             <p className="font-bold text-2xl  ml-2 cursor-pointer">BookStore</p>
           </div>
 
