@@ -3,11 +3,16 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import path from "path";
+import { fileURLToPath } from "url";
 
 import bookRoute from './route/book.route.js';
 import userRoute from './route/user.route.js';
 
 const app = express()
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 app.use("/assets", express.static(path.join(__dirname, "assets")));
 app.use(cors({
   origin: ["https://bookstore-v2-fronted-web-app.onrender.com"],
