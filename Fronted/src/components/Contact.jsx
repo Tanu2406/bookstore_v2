@@ -13,13 +13,13 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen px-4">
+    <div className="flex justify-center items-center w-full py-10 px-4">
       {/* Contact Form Container */}
-      <div className="bg-white p-6 md:p-10 border border-pink-300 rounded-2xl shadow-md w-full max-w-3xl">
+      <div className="bg-white p-6 md:p-10 border border-pink-300 rounded-2xl shadow-md w-full max-w-4xl">
         <h2 className="text-3xl font-bold text-center mb-4">Contact Us</h2>
 
-        {/* Form */}
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+        {/* Form - Single Column Layout */}
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6">
           {/* Name Input */}
           <div className="flex flex-col">
             <label htmlFor="name" className="mb-1 font-medium">Name</label>
@@ -52,7 +52,7 @@ const Contact = () => {
             <textarea
               id="message"
               placeholder="Enter your message"
-              className="px-3 py-2 border border-gray-300 rounded-md outline-none w-full h-28 resize-none"
+              className="px-3 py-2 border border-gray-300 rounded-md outline-none w-full h-32 resize-none"
               {...register("message", { required: "Please enter your message." })}
             />
             {errors.message && <p className="text-red-500 text-sm">{errors.message.message}</p>}

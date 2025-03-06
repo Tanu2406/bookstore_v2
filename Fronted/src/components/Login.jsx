@@ -55,7 +55,7 @@ const Login = ({ visible, onClose }) => {
   if (!visible) return null;
 
   return (
-    <div className="fixed inset-0 flex justify-center items-center  bg-opacity-50 z-50">
+    <div className="fixed inset-0 flex justify-center items-center bg-opacity-1 backdrop-blur-sm  z-50">
       <div className="m-4 w-full max-w-md bg-white p-6 border border-pink-400 rounded-2xl shadow-lg overflow-auto">
         <form onSubmit={handleSubmit(onSubmit)}>
           {/* Title & Close Button */}
