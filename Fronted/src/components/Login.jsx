@@ -98,7 +98,7 @@ const Login = ({ visible, onClose }) => {
 
           {/* Buttons & Signup Redirect */}
           <div className="flex justify-between items-center">
-            <button className="!bg-pink-400 text-white px-6 py-2 rounded-lg hover:bg-pink-300 w-full">
+            <button className="!bg-pink-400 text-white px-6 py-2 rounded-lg hover:!bg-pink-300 w-full">
               Login
             </button>
           </div>

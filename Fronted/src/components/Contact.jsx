@@ -13,7 +13,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex justify-center items-center w-full px-4 py-10 mt-20">
+    <div className="flex justify-center items-center w-full px-4 py-10 mt-20 lg:mt-10">
       {/* Contact Form Container */}
       <div className="bg-white p-6 md:p-10 border border-pink-300 rounded-2xl shadow-md w-full max-w-4xl">
         <h2 className="text-3xl font-bold text-center mb-4">Contact Us</h2>
@@ -21,7 +21,7 @@ const Contact = () => {
         {/* Form */}
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6">
           {/* Name Input */}
-          <div className="flex flex-col">
+          <div className="flex flex-col  text-left">
             <label htmlFor="name" className="mb-1 font-medium">Name</label>
             <input
               id="name"
@@ -34,7 +34,7 @@ const Contact = () => {
           </div>
 
           {/* Email Input */}
-          <div className="flex flex-col">
+          <div className="flex flex-col  text-left">
             <label htmlFor="email" className="mb-1 font-medium">Email</label>
             <input
               id="email"
@@ -47,7 +47,7 @@ const Contact = () => {
           </div>
 
           {/* Message Textarea */}
-          <div className="flex flex-col">
+          <div className="flex flex-col text-left">
             <label htmlFor="message" className="mb-1 font-medium">Message</label>
             <textarea
               id="message"
@@ -59,7 +59,7 @@ const Contact = () => {
           </div>
 
           {/* Submit Button */}
-          <button type="submit" className="w-full !bg-pink-500 text-white py-2 rounded-lg hover:bg-pink-400 transition">
+          <button type="submit" className="w-full !bg-pink-500 text-white py-2 rounded-lg hover:!bg-pink-400 transition">
             Submit
           </button>
         </form>
