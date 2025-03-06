@@ -96,7 +96,7 @@ const SignUp = () => {
 
             {/* Buttons & Login Redirect */}
             <div className="flex justify-between items-center">
-              <button type="submit" className="bg-pink-400 text-white px-6 py-2 rounded-lg hover:bg-pink-300">
+              <button type="submit" className="!bg-pink-400 text-white px-6 py-2 rounded-lg hover:bg-pink-300">
                 Sign Up
               </button>
               <p>

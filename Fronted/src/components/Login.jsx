@@ -55,7 +55,7 @@ const Login = ({ visible, onClose }) => {
   if (!visible) return null;
 
   return (
-    <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50">
+    <div className="fixed inset-0 flex justify-center items-center  bg-opacity-1 z-50">
       <div className="m-4 w-full max-w-md bg-white p-6 border border-pink-400 rounded-2xl shadow-lg overflow-auto">
         <form onSubmit={handleSubmit(onSubmit)}>
           {/* Title & Close Button */}
@@ -98,7 +98,7 @@ const Login = ({ visible, onClose }) => {
 
           {/* Buttons & Signup Redirect */}
           <div className="flex justify-between items-center">
-            <button className="bg-pink-400 text-white px-6 py-2 rounded-lg hover:bg-pink-300 w-full">
+            <button className="!bg-pink-400 text-white px-6 py-2 rounded-lg hover:bg-pink-300 w-full">
               Login
             </button>
           </div>
