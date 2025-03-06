@@ -13,15 +13,15 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen px-4">
+    <div className="flex justify-center items-center h-screen px-4">
       {/* Contact Form Container */}
-      <div className="bg-white p-6 md:p-10 border border-pink-300 rounded-2xl shadow-md w-full max-w-xl lg:max-w-3xl">
-        <h2 className="text-3xl font-bold text-center mb-6">Contact Us</h2>
+      <div className="bg-white p-6 md:p-10 border border-pink-300 rounded-2xl shadow-md w-full max-w-3xl">
+        <h2 className="text-3xl font-bold text-center mb-4">Contact Us</h2>
 
         {/* Form */}
-        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
           {/* Name Input */}
-          <div className="flex flex-col text-left w-full">
+          <div className="flex flex-col">
             <label htmlFor="name" className="mb-1 font-medium">Name</label>
             <input
               id="name"
@@ -30,11 +30,11 @@ const Contact = () => {
               className="px-3 py-2 border border-gray-300 rounded-md outline-none w-full"
               {...register("name", { required: "Please enter your name." })}
             />
-            {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>}
+            {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
           </div>
 
           {/* Email Input */}
-          <div className="flex flex-col text-left w-full">
+          <div className="flex flex-col">
             <label htmlFor="email" className="mb-1 font-medium">Email</label>
             <input
               id="email"
@@ -43,11 +43,11 @@ const Contact = () => {
               className="px-3 py-2 border border-gray-300 rounded-md outline-none w-full"
               {...register("email", { required: "Please enter your email." })}
             />
-            {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
+            {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
           </div>
 
           {/* Message Textarea */}
-          <div className="flex flex-col text-left w-full">
+          <div className="flex flex-col">
             <label htmlFor="message" className="mb-1 font-medium">Message</label>
             <textarea
               id="message"
@@ -55,11 +55,11 @@ const Contact = () => {
               className="px-3 py-2 border border-gray-300 rounded-md outline-none w-full h-28 resize-none"
               {...register("message", { required: "Please enter your message." })}
             />
-            {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>}
+            {errors.message && <p className="text-red-500 text-sm">{errors.message.message}</p>}
           </div>
 
           {/* Submit Button */}
-          <button type="submit" className="w-full !bg-pink-400 text-white py-2 rounded-lg hover:bg-pink-300 transition">
+          <button type="submit" className="w-full bg-pink-500 text-white py-2 rounded-lg hover:bg-pink-400 transition">
             Submit
           </button>
         </form>
