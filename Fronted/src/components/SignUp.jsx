@@ -56,7 +56,7 @@ const SignUp = () => {
         {/* Form */}
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
           {/* Name Field */}
-          <div className="flex flex-col">
+          <div className="flex flex-col text-left">
             <label htmlFor="name" className="mb-1 font-medium">Name</label>
             <input
               id="name"
@@ -69,7 +69,7 @@ const SignUp = () => {
           </div>
 
           {/* Email Field */}
-          <div className="flex flex-col">
+          <div className="flex flex-col text-left">
             <label htmlFor="email" className="mb-1 font-medium">Email</label>
             <input
               id="email"
@@ -82,7 +82,7 @@ const SignUp = () => {
           </div>
 
           {/* Password Field */}
-          <div className="flex flex-col">
+          <div className="flex flex-col text-left">
             <label htmlFor="password" className="mb-1 font-medium">Password</label>
             <input
               id="password"
@@ -95,7 +95,7 @@ const SignUp = () => {
           </div>
 
           {/* Submit Button */}
-          <button type="submit" className="w-full bg-pink-500 text-white py-2 rounded-lg hover:bg-pink-400 transition">
+          <button type="submit" className="w-full !bg-pink-500 text-white py-2 rounded-lg hover:!bg-pink-400 transition">
             Sign Up
           </button>
 
