@@ -13,9 +13,9 @@ const Contact = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto px-4 mt-10">
+    <div className="flex flex-col items-center min-h-screen pt-24 px-4">
       {/* Contact Form Container */}
-      <div className="bg-white p-6 border border-pink-300 rounded-2xl shadow-md">
+      <div className="bg-white p-6 border border-pink-300 rounded-2xl shadow-md max-w-lg w-full">
         <h2 className="text-3xl font-bold text-center mb-6">Contact Us</h2>
 
         {/* Form */}
