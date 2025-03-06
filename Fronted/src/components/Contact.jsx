@@ -21,7 +21,7 @@ const Contact = () => {
         {/* Form */}
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
           {/* Name Input */}
-          <div className="flex flex-col">
+          <div className="flex flex-col text-left w-full">
             <label htmlFor="name" className="mb-1 font-medium">Name</label>
             <input
               id="name"
@@ -34,7 +34,7 @@ const Contact = () => {
           </div>
 
           {/* Email Input */}
-          <div className="flex flex-col">
+          <div className="flex flex-col text-left w-full">
             <label htmlFor="email" className="mb-1 font-medium">Email</label>
             <input
               id="email"
@@ -47,7 +47,7 @@ const Contact = () => {
           </div>
 
           {/* Message Textarea */}
-          <div className="flex flex-col">
+          <div className="flex flex-col text-left w-full">
             <label htmlFor="message" className="mb-1 font-medium">Message</label>
             <textarea
               id="message"
