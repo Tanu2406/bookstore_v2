@@ -1,50 +1,71 @@
-import React from 'react'
-import { useForm } from 'react-hook-form';
-import { Link} from 'react-router-dom'
+import React from "react";
+import { useForm } from "react-hook-form";
 
 const Contact = () => {
-   const {
-             register,
-             handleSubmit,
-             formState: { errors },
-           } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
   return (
-   <>
-   
-   <div className=' max-w-screen-2xl container mx-auto mr-2 ml-2 '>
-   <div className='mt-4 mb-0 items-center justify-center text-center  bg-white  p-4 border border-pink-300 rounded-2xl '>
-    <form onSubmit={handleSubmit((data) => console.log(data))} className='flex  flex-col justify-center items-center'>
-    <div className='flex justify-between mb-4'>
-    <h2 className="font-bold text-3xl">Contact Us</h2>
-  
-    </div>
+    <div className="max-w-lg mx-auto px-4 mt-10">
+      {/* Contact Form Container */}
+      <div className="bg-white p-6 border border-pink-300 rounded-2xl shadow-md">
+        <h2 className="text-3xl font-bold text-center mb-6">Contact Us</h2>
 
-    <div className='mb-4 flex justify-start items-start flex-col'>
-        <p className='mb-2 ' >Name</p>
-        <input id='name' type='text' placeholder='Enter your name' className=' px-2 py-1 border w-96  border-gray-300 rounded-md outline-none' {...register('name', { required: true })}></input>
-        {errors.name && <p className='text-red-500 text-sm mt-1'>Please enter your name.</p>}
-      </div>
-      <div className='mb-4 flex justify-start items-start flex-col'>
-        <p className='mb-2 ' >Email</p>
-        <input id='email' type='email' placeholder='Enter your email' className=' px-2 py-1 border w-96  border-gray-300 rounded-md outline-none' {...register('email', { required: true })}></input>
-        {errors.email && <p className='text-red-500 text-sm mt-1'>Please enter your email.</p>}
-      </div>
-      <div className='mb-4 flex justify-start items-start flex-col'>
-        <p className='mb-2'>Message</p>
-        <textarea  id='message' type='text' placeholder='Enter your message' className=' px-2 pt-1 border w-96 h-[80px] border-gray-300 rounded-md outline-none  placeholder:text-top ' {...register('password', { required: true })}></textarea>
-        {errors.message && <p className='text-red-500 text-sm mt-1'>Please enter your message.</p>}
-      </div>
-      <div className='flex justify-between mb-2 '>
-      <button className="mt-4 mb-4 !bg-pink-400 text-white px-6 py-2 rounded-lg hover:!bg-pink-300">Submit</button>
-     
-      </div>
-      </form>
-    </div>
-   
-   </div>
-   
-   </>
-  )
-}
+        {/* Form */}
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
+          {/* Name Input */}
+          <div className="flex flex-col">
+            <label htmlFor="name" className="mb-1 font-medium">Name</label>
+            <input
+              id="name"
+              type="text"
+              placeholder="Enter your name"
+              className="px-3 py-2 border border-gray-300 rounded-md outline-none w-full"
+              {...register("name", { required: "Please enter your name." })}
+            />
+            {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>}
+          </div>
 
-export default Contact
+          {/* Email Input */}
+          <div className="flex flex-col">
+            <label htmlFor="email" className="mb-1 font-medium">Email</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="Enter your email"
+              className="px-3 py-2 border border-gray-300 rounded-md outline-none w-full"
+              {...register("email", { required: "Please enter your email." })}
+            />
+            {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
+          </div>
+
+          {/* Message Textarea */}
+          <div className="flex flex-col">
+            <label htmlFor="message" className="mb-1 font-medium">Message</label>
+            <textarea
+              id="message"
+              placeholder="Enter your message"
+              className="px-3 py-2 border border-gray-300 rounded-md outline-none w-full h-28 resize-none"
+              {...register("message", { required: "Please enter your message." })}
+            />
+            {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>}
+          </div>
+
+          {/* Submit Button */}
+          <button type="submit" className="w-full bg-pink-400 text-white py-2 rounded-lg hover:bg-pink-300 transition">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default Contact;
