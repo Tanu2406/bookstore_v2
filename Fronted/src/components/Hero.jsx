@@ -1,6 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
+  const navigate = useNavigate();
+  const handleClick = ()=>{
+ navigate("/signup");
+  }
   return (
     <>
     <div className="container  mx-auto flex flex-col-reverse md:flex-row justify-center items-center px-4 md:px-8 mt-10 md:mt-24 gap-6 md:gap-12  md:m-12">
@@ -28,7 +33,7 @@ const Hero = () => {
         />
 
         {/* Button */}
-        <button className="mt-4 mb-4 !bg-pink-400 text-white px-6 py-2 rounded-lg hover:!bg-pink-300">
+        <button className="mt-4 mb-4 !bg-pink-400 text-white px-6 py-2 rounded-lg hover:!bg-pink-300" onClick={handleClick}>
           Get Started
         </button>
       </div>

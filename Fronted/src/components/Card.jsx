@@ -1,7 +1,14 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
+
 
 const Card = ({item}) => {
-   
+  const navigate = useNavigate();
+ 
+
+  const handleBuyNow = (id) => {
+    navigate(`/checkout/${id}`);
+  };
   return (
  <>
     <div>
@@ -26,7 +33,7 @@ const Card = ({item}) => {
                 {/* Buttons */}
                 <div className="flex justify-between items-center mt-4">
                   <button className="border !border-pink-400 text-xs px-2 py-1 rounded-md hover:!bg-pink-400 hover:text-white duration-200">{item.price}</button>
-                  <button className="border !border-pink-400 text-xs px-2 py-1 rounded-md hover:!bg-pink-400 hover:text-white duration-200 ">{item.btn3}</button>
+                  <button className="border !border-pink-400 text-xs px-2 py-1 rounded-md hover:!bg-pink-400 hover:text-white duration-200 " onClick={() => handleBuyNow(item._id)}>{item.btn3}</button>
                 </div>
               </div>
             </div>
