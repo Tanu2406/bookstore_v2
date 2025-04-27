@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { X } from "lucide-react";
-import { useSpring, animated } from 'react-spring';
+
 
 const OrderConfirmation = () => {
   const { orderId } = useParams();
@@ -23,12 +23,7 @@ const OrderConfirmation = () => {
   }, [orderId]);
 
   // Animation for success message
-  const props = useSpring({
-    opacity: 1,
-    transform: 'scale(1)',
-    from: { opacity: 0, transform: 'scale(0.5)' },
-    config: { tension: 180, friction: 12 },
-  });
+  
 
   const handleClose = () => {
     navigate("/"); // Redirect to home page when closing
