@@ -46,7 +46,7 @@ const OrderConfirmation = () => {
 
       <h1 className="text-3xl font-bold mb-6">Order Confirmation</h1>
 
-      <animated.div style={props} className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md text-center">
+   <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md text-center">
         <h2 className="text-xl font-semibold mb-4">Order #{order._id}</h2>
 
         {/* Book Image (If available) */}
@@ -60,7 +60,7 @@ const OrderConfirmation = () => {
       
         {/* Thank you message */}
         <p className="mt-4 text-green-600 font-semibold">Thank you for your purchase!</p>
-      </animated.div>
+        </div>
     </div>
   );
 };
