@@ -8,6 +8,8 @@ import SignUp from './components/SignUp'
 import About from './components/About'
 import ContactUs from './components/Contact/ContactUs'
 import AboutUs from './components/About/AboutUs'
+import Checkout from './components/Checkout'
+import OrderConfirmation  from './components/OrderConfirmation'
 import { Toaster } from 'react-hot-toast';
 import { useAuth } from './context/AuthProvider'
 
@@ -25,6 +27,8 @@ function App() {
     <Route path="/signup" element={<SignUp/>}></Route>
     <Route path="/contact" element={<ContactUs/>}></Route>
     <Route path="/about" element={<AboutUs/>}></Route>
+    <Route path="/checkout/:id" element={<Checkout />} />
+    <Route path="/order-confirmation/:orderId" element={<OrderConfirmation />} />
    </Routes>
    </BrowserRouter>
    <Toaster />
