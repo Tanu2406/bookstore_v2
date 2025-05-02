@@ -1,13 +1,11 @@
 import React from 'react'
- // Replace with your image path
 
 const About = () => {
   return (
     <div className='text-start ml-4 mr-4 md:ml-20 md:mr-20'>
       <h2 className='font-bold text-4xl mb-4 text-center'>About Us</h2>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Left Column: Text Content */}
+    
         <div>
           <h3 className='font-bold text-2xl mb-1 text-pink-700'>BookStore</h3>
           <p className='mb-2'>
@@ -36,16 +34,9 @@ const About = () => {
           </p>
         </div>
 
-        {/* Right Column: Image */}
-        <div>
-          <img 
-            src="/about.jpeg" 
-            alt="About Us" 
-            className="w-full h-auto rounded-lg shadow-lg" 
-          />
-        </div>
+       
       </div>
-    </div>
+   
   )
 }
 

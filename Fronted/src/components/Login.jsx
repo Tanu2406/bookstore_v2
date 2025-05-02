@@ -36,8 +36,9 @@ const Login = ({ visible, onClose }) => {
       .post("https://bookstore-v2-backend-web-app.onrender.com/user/login", userInfo)
       .then((res) => {
         console.log(res.data);
-        if (res.data) {
+        if (res.data && res.data.token) {
           toast.success("Login successfully");
+          localStorage.setItem("token", res.data.token);
           localStorage.setItem("User", JSON.stringify(res.data.user));
           setTimeout(() => {
             window.location.reload();

@@ -8,6 +8,7 @@ import { fileURLToPath } from "url";
 import bookRoute from './route/book.route.js';
 import userRoute from './route/user.route.js';
 import orderRoute from './route/order.route.js';
+import protectedRoute from "./route/protected.route.js";
 
 const app = express()
 
@@ -44,6 +45,7 @@ console.log("Connect to mongoDB")
 app.use("/book",bookRoute);
 app.use("/user",userRoute);
 app.use("/order", orderRoute);
+app.use("/protected", protectedRoute);
 
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`)

@@ -30,8 +30,9 @@ const SignUp = () => {
         userInfo
       );
 
-      if (response.data) {
+      if (response.data && response.data.token) {
         toast.success("Signup Successfully");
+        localStorage.setItem("token", response.data.token);
         localStorage.setItem("User", JSON.stringify(response.data.user));
         setTimeout(() => {
           navigate("/", { replace: true });
